@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{85979F6A-4006-4905-88FE-F882BEF30835}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DesignPatterns.Behavioral</RootNamespace>
+    <AssemblyName>DesignPatterns.Behavioral</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChainOfResponsibility\Approver.cs" />
+    <Compile Include="ChainOfResponsibility\EngineeringApprover.cs" />
+    <Compile Include="ChainOfResponsibility\FinanceApprover.cs" />
+    <Compile Include="ChainOfResponsibility\Material.cs" />
+    <Compile Include="ChainOfResponsibility\PurchasingApprover.cs" />
+    <Compile Include="ChainOfResponsibility\Usage.cs" />
+    <Compile Include="Command\ColorInvoker.cs" />
+    <Compile Include="Command\ICommand.cs" />
+    <Compile Include="Command\UpdateBackColor.cs" />
+    <Compile Include="Command\UpdateForeColor.cs" />
+    <Compile Include="Command\Usage.cs" />
+    <Compile Include="Interpreter\AndExpression.cs" />
+    <Compile Include="Interpreter\Expression.cs" />
+    <Compile Include="Interpreter\OrExpression.cs" />
+    <Compile Include="Interpreter\Parser.cs" />
+    <Compile Include="Interpreter\Usage.cs" />
+    <Compile Include="Interpreter\ValueExpression.cs" />
+    <Compile Include="Iterator\Aggregate.cs" />
+    <Compile Include="Iterator\IAggregate.cs" />
+    <Compile Include="Iterator\IIterator.cs" />
+    <Compile Include="Iterator\IteratorClass.cs" />
+    <Compile Include="Iterator\Usage.cs" />
+    <Compile Include="Iterator\User.cs" />
+    <Compile Include="Mediator\Colleague.cs" />
+    <Compile Include="Mediator\IMediator.cs" />
+    <Compile Include="Mediator\Mediator.cs" />
+    <Compile Include="Mediator\Usage.cs" />
+    <Compile Include="Memento\Caretaker.cs" />
+    <Compile Include="Memento\Usage.cs" />
+    <Compile Include="Memento\User.cs" />
+    <Compile Include="Memento\UserMemento.cs" />
+    <Compile Include="Observer\BigStorePrice.cs" />
+    <Compile Include="Observer\Price.cs" />
+    <Compile Include="Observer\PriceObserver.cs" />
+    <Compile Include="Observer\PriceWatcher.cs" />
+    <Compile Include="Observer\Usage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="State\LoggedOutState.cs" />
+    <Compile Include="State\PremiumState.cs" />
+    <Compile Include="State\StandardState.cs" />
+    <Compile Include="State\State.cs" />
+    <Compile Include="State\Usage.cs" />
+    <Compile Include="State\User.cs" />
+    <Compile Include="Strategy\Customer.cs" />
+    <Compile Include="Strategy\DiscountStrategy.cs" />
+    <Compile Include="Strategy\LoyalStudentDiscount.cs" />
+    <Compile Include="Strategy\LoyaltyDiscount.cs" />
+    <Compile Include="Strategy\NoDiscount.cs" />
+    <Compile Include="Strategy\StudentDiscount.cs" />
+    <Compile Include="Strategy\Usage.cs" />
+    <Compile Include="Template\DataLogger.cs" />
+    <Compile Include="Template\FileDataLogger.cs" />
+    <Compile Include="Template\Usage.cs" />
+    <Compile Include="Template\WindowsEventLogger.cs" />
+    <Compile Include="Visitor\CreditVisitor.cs" />
+    <Compile Include="Visitor\Element.cs" />
+    <Compile Include="Visitor\ExpirationVisitor.cs" />
+    <Compile Include="Visitor\IVisitor.cs" />
+    <Compile Include="Visitor\Usage.cs" />
+    <Compile Include="Visitor\User.cs" />
+    <Compile Include="Visitor\Users.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

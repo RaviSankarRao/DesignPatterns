@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{854B459B-137B-487F-9B50-77C394B70E39}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DesignPatterns.Structural</RootNamespace>
+    <AssemblyName>DesignPatterns.Structural</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapter\Customer.cs" />
+    <Compile Include="Adapter\CustomerAdapter.cs" />
+    <Compile Include="Adapter\CustomerDTO.cs" />
+    <Compile Include="Adapter\ICustomerList.cs" />
+    <Compile Include="Adapter\Usage.cs" />
+    <Compile Include="Bridge\EmailMessage.cs" />
+    <Compile Include="Bridge\IMessage.cs" />
+    <Compile Include="Bridge\MessageController.cs" />
+    <Compile Include="Bridge\MessageType.cs" />
+    <Compile Include="Bridge\SMSMessage.cs" />
+    <Compile Include="Bridge\Usage.cs" />
+    <Compile Include="Composite\Assembly.cs" />
+    <Compile Include="Composite\BaseAssembly.cs" />
+    <Compile Include="Composite\Part.cs" />
+    <Compile Include="Composite\Usage.cs" />
+    <Compile Include="Decorator\Computer.cs" />
+    <Compile Include="Decorator\ComputerBase.cs" />
+    <Compile Include="Decorator\ComputerDecorator.cs" />
+    <Compile Include="Decorator\Options.cs" />
+    <Compile Include="Decorator\Usage.cs" />
+    <Compile Include="Facade\Follower.cs" />
+    <Compile Include="Facade\Notification.cs" />
+    <Compile Include="Facade\Post.cs" />
+    <Compile Include="Facade\Usage.cs" />
+    <Compile Include="Facade\User.cs" />
+    <Compile Include="Flyweight\Usage.cs" />
+    <Compile Include="Flyweight\User.cs" />
+    <Compile Include="Flyweight\UserFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proxy\IPaymentReceipt.cs" />
+    <Compile Include="Proxy\Order.cs" />
+    <Compile Include="Proxy\PaymentReceipt.cs" />
+    <Compile Include="Proxy\PaymentReceiptProxy.cs" />
+    <Compile Include="Proxy\Receipt.cs" />
+    <Compile Include="Proxy\Usage.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
